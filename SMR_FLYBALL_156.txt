@@ -1,23 +1,17 @@
-defaults nosave
+#$ TITLE: SMR LDARC FLYBALL 156
+#$ FIRMWARE_VERSION: 4.3
+#$ CATEGORY: TUNE
+#$ STATUS: EXPERIMENTAL
+#$ KEYWORDS: Dronesoccer, flybal, 3S, 4S, F9B, 2.5 inch
+#$ AUTHOR: SENART MULTIROTOR RACING
+#$ DESCRIPTION: SMR Drone soccer
+#$ DESCRIPTION:
+#$ DESCRIPTION: Enjoy!
+#$ DISCUSSION: 
+#$ INCLUDE_WARNING: 
+#$ INCLUDE: presets/4.3/tune/defaults.txt
 
-# diff all
-
-# version
-# Betaflight / STM32F411 (S411) 4.3.1 Jul 13 2022 / 03:32:52 (8d4f005) MSP API: 1.44
-# config: manufacturer_id: LDAR, board_name: LDARC_F411, version: edcd244b, date: 2022-06-29T02:24:46Z
-
-# start the command batch
-batch start
-
-# reset configuration to default settings
-defaults nosave
-
-board_name LDARC_F411
-manufacturer_id LDAR
-mcu_id 0062004c3236510339313331
-signature 
-
-# name: FB156 6081
+# name: LDARC FB156
 
 # feature
 feature -SOFTSERIAL
@@ -139,3 +133,5 @@ rateprofile 5
 rateprofile 0
 
 # save configuration
+save
+# 
