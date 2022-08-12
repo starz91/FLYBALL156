@@ -1,0 +1,141 @@
+defaults nosave
+
+# diff all
+
+# version
+# Betaflight / STM32F411 (S411) 4.3.1 Jul 13 2022 / 03:32:52 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: LDAR, board_name: LDARC_F411, version: edcd244b, date: 2022-06-29T02:24:46Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name LDARC_F411
+manufacturer_id LDAR
+mcu_id 0062004c3236510339313331
+signature 
+
+# name: FB156 6081
+
+# feature
+feature -SOFTSERIAL
+feature -TELEMETRY
+feature -RX_PARALLEL_PWM
+feature -OSD
+feature -AIRMODE
+feature LED_STRIP
+
+# led
+led 0 0,0:N:CW:4
+led 1 1,0::CW:4
+led 2 2,0::CW:4
+led 3 3,0::CW:4
+led 4 4,0::CW:4
+led 5 5,0:S:CW:4
+
+# aux
+aux 0 0 0 900 1300 0 0
+aux 1 1 0 900 1300 0 0
+
+# adjrange
+adjrange 0 0 2 900 1300 12 2 0 0
+adjrange 1 0 2 1325 1700 12 2 0 0
+adjrange 2 0 2 1700 2100 12 2 0 0
+
+# master
+set gyro_lpf1_static_hz = 225
+set gyro_lpf2_static_hz = 450
+set dyn_notch_min_hz = 100
+set gyro_lpf1_dyn_min_hz = 225
+set gyro_lpf1_dyn_max_hz = 450
+set acc_trim_pitch = -50
+set acc_trim_roll = -10
+set acc_calibration = -86,-15,176,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set min_check = 1010
+set max_check = 1990
+set rssi_channel = 16
+set small_angle = 180
+set pid_process_denom = 1
+set simplified_gyro_filter_multiplier = 90
+set gyro_1_sensor_align = DEFAULT
+set gyro_1_align_yaw = 1800
+set name = FB156 6081
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 67
+set dterm_lpf1_dyn_max_hz = 135
+set dterm_lpf1_static_hz = 67
+set dterm_lpf2_static_hz = 135
+set yaw_lowpass_hz = 0
+set p_pitch = 33
+set i_pitch = 39
+set d_pitch = 11
+set f_pitch = 0
+set p_roll = 32
+set i_roll = 37
+set d_roll = 9
+set f_roll = 0
+set p_yaw = 32
+set i_yaw = 37
+set f_yaw = 0
+set angle_level_strength = 20
+set level_limit = 45
+set d_min_roll = 9
+set d_min_pitch = 11
+set simplified_master_multiplier = 110
+set simplified_i_gain = 65
+set simplified_d_gain = 30
+set simplified_pi_gain = 65
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 0
+set simplified_dterm_filter_multiplier = 90
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_srate = 40
+set pitch_srate = 40
+set yaw_srate = 40
+set throttle_limit_type = SCALE
+
+rateprofile 1
+
+# rateprofile 1
+set roll_srate = 40
+set pitch_srate = 40
+set yaw_srate = 40
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 80
+
+rateprofile 2
+
+# rateprofile 2
+set roll_srate = 40
+set pitch_srate = 40
+set yaw_srate = 40
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 60
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
